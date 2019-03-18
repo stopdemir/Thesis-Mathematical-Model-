@@ -1,0 +1,41 @@
+/*********************************************
+ * OPL 12.6.0.0 Data
+ * Author: ST
+ * Creation Date: 08 Nis 2017 at 21:29:23
+ *********************************************/
+//SheetConnection data("Fatih_November.xlsx");
+//SheetConnection data("Ataþehir_November.xlsx");
+//SheetConnection data("Çekmeköy_November.xlsx");
+//SheetConnection data("Kadýköy_November.xlsx");
+//SheetConnection data("Kartal_November.xlsx"); 
+//SheetConnection data("Maltepe_November.xlsx"); 
+//SheetConnection data("Pendik_November.xlsx"); 
+//SheetConnection data("Sancaktepe_November.xlsx"); 
+//SheetConnection data("Sultanbeyli_November.xlsx"); 
+//SheetConnection data("Tuzla_November.xlsx"); 
+//SheetConnection data("Ümraniye_November.xlsx"); 
+SheetConnection data("Üsküdar_November.xlsx");
+//SheetConnection data("Beyoðlu_November.xlsx"); 
+//SheetConnection data("Sarýyer_November.xlsx"); 
+//SheetConnection data("Þiþli_November.xlsx"); 
+//SheetConnection data("Zeytinburnu_November.xlsx"); 
+//SheetConnection data("Bahçelievler_November.xlsx"); 
+//SheetConnection data("Baþakþehir_November.xlsx"); 
+//SheetConnection data("Küçükçekmece_November.xlsx");
+
+
+numZones=4;
+numDistricts=33;
+numParties=5;
+bigM=100000000;
+ 
+arcs from SheetRead(data,"'Arcs'!A1:BO67");
+p from SheetRead(data,"'Pop'!G2:G34");
+
+v from SheetRead(data,"'Pop'!B2:F34");
+
+Beta=0.10;
+
+//To write the decision variable results
+
+z to SheetWrite(data,"'Sayfa3'!A1:E34"); 
